@@ -34,7 +34,7 @@ def dataset_prep():
         for data in os.listdir(p):
             pathe_image=os.path.join(p,data)
             image=cv2.imread(pathe_image)
-            face,faces,_=ret_rect(image,pathe_image)
+            face,faces,_=ret_rect(image)
             i=i+1
             if(faces==1):
                 name=[str(img)+str(i)+'.jpg',i]
