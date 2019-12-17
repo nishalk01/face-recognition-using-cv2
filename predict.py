@@ -1,6 +1,6 @@
 import cv2
 import numpy
-from fun import ret_rect
+from dataset_create import ret_rect
 imag=cv2.imread('-1x-1.jpg')
 w,h,_=imag.shape
 img,faces,coordinate=ret_rect(imag)
@@ -19,7 +19,6 @@ if (faces==1):
      print("i donno who u are")
  else:
      for x,y,w,h in coordinate:
-      #
       cv2.rectangle(imag,(x,y),(x+w,y+h),(0,255,0),2)
       fontScale = (w * h) / (500 * 500)
       cv2.putText(imag,name,(int(x),int(y)),cv2.FONT_HERSHEY_SIMPLEX,fontScale,(255,255,0),4)
