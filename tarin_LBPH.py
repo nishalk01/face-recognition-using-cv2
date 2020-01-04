@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 import cv2
 
 label=np.load('y.npy', allow_pickle=True)
